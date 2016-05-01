@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <body>
+        <ui:composition template="templateIndex/commonLayoutIndex.xhtml">
+            <ui:define name="content">
+        
+                <h3><h:outputText value="Veuillez saisir vos informations pour compléter votre demande de devis"/></h3>
+                   
+                   <br></br><br></br><br></br><br></br>
+                   
+           <h:form>
+               
+                <TABLE>
+                    <TR>
+                        <TD><h:outputLabel value="Nom:"/></TD>
+                        <TD><h:inputText value="#{devisControler.dtoDevisClient.nom}"/><br/></TD>
+                    </TR>
+                    <TR>
+                            <TD><h:outputLabel value="Prénom:"/></TD>
+                            <TD><h:inputText value="#{devisControler.dtoDevisClient.prenom}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD><h:outputLabel value="Mail:"/></TD>
+                            <TD><h:inputText value="#{devisControler.dtoDevisClient.mail}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD> <h:outputLabel value="Telephone:"/></TD>
+                            <TD><h:inputText value="#{devisControler.dtoDevisClient.telephone}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD><h:outputLabel value="Numero:"/></TD>
+                            <TD><h:inputText value="#{devisControler.dtoDevisClient.numero}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD> <h:outputLabel value="Rue:"/></TD>
+                            <TD><h:inputText value="#{devisControler.dtoDevisClient.rue}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD><h:outputLabel value="Code Postale:"/></TD>
+                            <TD><h:inputText value="#{devisControler.dtoDevisClient.codePostal}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD>  <h:outputLabel value="Ville:"/></TD>
+                            <TD>     <h:inputText value="#{devisControler.dtoDevisClient.ville}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD>  <h:outputLabel value="Pays:"/></TD>
+                            <TD>   <h:inputText value="#{devisControler.dtoDevisClient.pays}"/><br/></TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD>    <h:outputLabel value="Type de Prestation : "/></TD>
+                            <TD>
+                                     <h:selectOneMenu value="#{devisControler.selectedPrestation}">
+                                     <f:selectItems value="#{devisControler.options}" />
+                                     </h:selectOneMenu><br/>	
+                            </TD>
+                    </TR>
+                    
+                    <TR>
+                            <TD><h:outputLabel value="Date souhaitée:"/></TD>
+                            <TD><h:inputText value="#{devisControler.dtoDevisClient.date}"/>jj/mm/aaaa<br/></TD>
+                    </TR>
+                    
+                    
+                    
+                </TABLE>
+
+                <h:commandButton value="Envoyer la demande de devis" type="submit" action="#{devisControler.ajoutDevis}" />
+            </h:form>
+        
+     
+            </ui:define> 
+        </ui:composition>
+        
+    </body>
+</html>

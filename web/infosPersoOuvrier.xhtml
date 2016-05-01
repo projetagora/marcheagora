@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+
+
+    <h:body>
+        <ui:composition template="templateOuvrier/commonLayoutOuvrier.xhtml">
+        <ui:define name="content">
+
+
+            <h:outputText value="Afficher les informations personnelles"/><br/>
+
+            <h:form>
+                
+             <table>
+               <tr>
+                <TD><h:outputLabel value="Nom:"/></TD>
+                <TD><h:inputText value="#{ouvrierControler.dtoUtilisateur.nom}"/><br/></TD>
+               </tr>
+                <tr>
+               <TD><h:outputLabel value="Prénom:"/></TD>
+                <TD><h:inputText value="#{ouvrierControler.dtoUtilisateur.prenom}"/><br/></TD>
+                </tr>
+                 <tr>
+                <TD><h:outputLabel value="Rue:"/></TD>
+                <TD><h:inputText value="#{ouvrierControler.dtoUtilisateur.rue}"/><br/></TD>
+                </tr>
+                <tr>
+                <TD><h:outputLabel value="Code Postal:"/></TD>
+                <TD><h:inputText value="#{ouvrierControler.dtoUtilisateur.codePostale}"/><br/></TD>
+                </tr>
+                 <tr>
+                <TD><h:outputLabel value="Ville:"/></TD>
+                <TD><h:inputText value="#{ouvrierControler.dtoUtilisateur.ville}"/><br/></TD>
+                </tr>
+                 <tr>
+                <TD><h:outputLabel value="Pays:"/></TD>
+                <TD><h:inputText value="#{ouvrierControler.dtoUtilisateur.pays}"/><br/></TD>
+                </tr>
+                 <tr>
+                
+                <TD><h:commandButton value="Modifier" type="submit" action="#{ouvrierControler.modifierInfosPerso}" /></TD>
+                 </tr>
+             </table>
+            </h:form>
+
+        </ui:define>
+        
+     
+
+
+            </ui:composition>
+            
+        
+    </h:body>
+</html>

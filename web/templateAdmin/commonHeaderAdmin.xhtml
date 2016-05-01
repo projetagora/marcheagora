@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <body>
+        <ui:composition>
+            <script name="jquery/jquery.js" library="primefaces"></script>
+            <h:graphicImage value="logo.jpg" height="150px;" />
+            
+                  <marquee behavior="alternate"> 
+            <h:graphicImage value="construction.jpg" height="100px;" /> 
+            <h:graphicImage value="fenetres.jpg"  height="100px;"/>
+            <h:graphicImage value="menuiserie.jpg" height="100px;"/>   
+            <h:graphicImage value="plomb.png" height="100px;" /> 
+            <h:graphicImage value="devis.gif" height="100px;"/>
+       </marquee>     
+            
+            
+            <h:form style="width:auto;">
+
+                <p:menubar>
+                    <p:menuitem value="Accueil" action="#{adminControler.goAccueil}"></p:menuitem>
+                    
+                    <p:menuitem value="Consulter Devis" action="#{adminControler.goDevis}"></p:menuitem>
+                    
+                   
+                        
+                     <p:menuitem value="Se déconnecter" action="#{authentificationControler.logout}"></p:menuitem>   
+                        
+                </p:menubar>
+
+            </h:form>
+
+        </ui:composition>
+    </body>
+</html>
